@@ -1,0 +1,3 @@
+keeping the virtual environment on, in terminal type - 
+
+> pip freeze > requirements.txt
