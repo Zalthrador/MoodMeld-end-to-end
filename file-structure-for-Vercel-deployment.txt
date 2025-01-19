@@ -1,0 +1,7 @@
+project-root/
+├── api/
+│   ├── app.py
+├── static/
+├── templates/
+├── requirements.txt
+└── vercel.json
