@@ -1,0 +1,141 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    height: 100vh;
+    background-color: #004852;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-card {
+    width: 60%;
+    height: 60%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 30px; /* Smooth rounded corners */
+    color: #ffffff; /* White text for contrast */
+    font-size: 18px; /* Legible font size */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    text-align: center; /* Center content within the div */
+    transition: all 0.3s ease; /* Smooth animation on hover */
+}
+
+.form-card:hover {
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+/* Active State */
+.form-card:active {
+    transform: translateY(2px); /* Simulate press effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Reduce shadow for pressed look */
+}
+
+label {
+    font-family: "Roboto Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: antiquewhite;
+    font-size: 45px;
+}
+
+.div-label{
+    margin: 0 0 20px 0;
+}
+textarea {
+    width: 100%; /* Full-width to adapt to container */
+    max-width: 600px; /* Optional: Limit maximum width */
+    height: 200px; /* Default height */
+    max-height: 400px;
+    padding: 15px; /* Inner spacing for comfortable typing */
+    border: 2px solid #d1d5db; /* Light gray border */
+    border-radius: 10px; /* Smooth rounded corners */
+    outline: none;
+    background-color: #72a8eb2d;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #1b1e20;
+    resize: vertical;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* On focus */
+textarea:focus {
+    border-color: #3b82f6;
+    background-color: #92b5e0b7;
+    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.2);
+}
+
+textarea::placeholder{
+    color: #b2c5c5;
+    font-style: italic;
+}
+
+textarea:disabled {
+    background-color: #e5e7eb; 
+    color: #9ca3af;
+    cursor: not-allowed;
+    border-color: #d1d5db;
+}
+
+.submit-btn{
+    margin: 10px 0 0 0;
+}
+
+input {
+    font-size: 20px;
+    font-family: "Roboto Mono", serif;
+    font-optical-sizing: auto;
+    color: #ffffff; 
+    background-color: #6a30acad; 
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px; 
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; /* Smooth animations */
+}
+
+/* Hover Effect */
+input:hover {
+    background-color: #093941;
+    box-shadow: 0 6px 10px rgba(0, 110, 116, 0.185);
+    transform: translateY(-2px);
+}
+
+/* Active State */
+input:active {
+    background-color: #013035;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(2px);
+}
+
+/* Disabled State */
+input:disabled {
+    background-color: #b2c5c5;
+    color: #ffffff;
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: 0.6;
+}

@@ -1,0 +1,108 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    height: 100vh;
+    background-color: #004852;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-card {
+    width: 60%;
+    height: 60%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 18px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+/* Active State */
+.result-card:active {
+    transform: translateY(2px); /* Simulate press effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Reduce shadow for pressed look */
+}
+
+h1 {
+    font-family: "Open Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+    color: antiquewhite;
+    font-size: 55px;
+}
+
+p {
+    color: violet;
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+}
+
+button {
+    font-size: 20px;
+    font-family: "Roboto Mono", serif;
+    font-optical-sizing: auto;
+    color: #ffffff; 
+    background-color: #6a30acad; 
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px; 
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; /* Smooth animations */
+    margin: 30px 0 0 0;
+}
+
+/* Hover Effect */
+button:hover {
+    background-color: #093941;
+    box-shadow: 0 6px 10px rgba(0, 110, 116, 0.185);
+    transform: translateY(-2px);
+}
+
+/* Active State */
+button:active {
+    background-color: #013035;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(2px);
+}
+
+/* Disabled State */
+button:disabled {
+    background-color: #b2c5c5;
+    color: #ffffff;
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: 0.6;
+}
