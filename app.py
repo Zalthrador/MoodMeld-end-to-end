@@ -1,4 +1,4 @@
-import re, numpy
+import re, numpy, os
 from sklearn.feature_extraction.text import TfidfVectorizer
 from joblib import dump, load
 from nltk import word_tokenize
@@ -15,10 +15,15 @@ from flask import (
     session,
     Response,
 )
-
 app = Flask(__name__)
-app.secret_key = "your_secret_key"
 
+'''
+app.secret_key = "your_secret_key"
+# Use an environment variable for SECRET_KEY
+app.secret_key = os.getenv("SECRET_KEY", "default-secret-key")  # Replace "default-secret-key" with a secure fallback for development only
+'''
+app.secret_key = os.getenv("SECRET_KEY", "68f7dfdc188c7c14d75fcfb93e972dbf83c39adbb5182b4427a15204d40769b5")
+# SECRET_KEY=70b18dad5b326380c8d85bcf0380aedd579eab92042ce3ab9a0982556e770d3f
 
 def tokenizer(text):
     # Convert to lowercase
