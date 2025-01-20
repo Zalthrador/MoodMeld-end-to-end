@@ -23,7 +23,7 @@ app.secret_key = "your_secret_key"
 app.secret_key = os.getenv("SECRET_KEY", "default-secret-key")  # Replace "default-secret-key" with a secure fallback for development only
 '''
 app.secret_key = os.getenv("SECRET_KEY", "68f7dfdc188c7c14d75fcfb93e972dbf83c39adbb5182b4427a15204d40769b5")
-# for "SECRET_KEY" check 'file-structure-for-Vercel-deployment.txt'
+# for "SECRET_KEY" check 'file-structure-for-Vercel-deployment.txt' or 'env.txt'
 
 
 # Only use this lines of code for deployment
