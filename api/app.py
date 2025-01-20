@@ -48,6 +48,12 @@ def tokenizer(text):
     return tokens
 
 
+import __main__
+
+# Ensure tokenizer is defined or imported above this line
+__main__.tokenizer = tokenizer
+
+
 # Load the saved model
 # loaded_model = load("./model.joblib")
 # vectorizer = load('./tfidf_vectorizer.joblib')
