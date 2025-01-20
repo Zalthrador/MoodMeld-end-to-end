@@ -1,10 +1,11 @@
+'''
 import re, numpy
 from sklearn.feature_extraction.text import TfidfVectorizer
 from joblib import dump, load
 from nltk import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
-
+'''
 from flask import (
     Flask,
     render_template,
@@ -19,7 +20,7 @@ from flask import (
 app = Flask(__name__)
 app.secret_key = "your_secret_key"
 
-
+'''
 def tokenizer(text):
     # Convert to lowercase
     text = text.lower()
@@ -81,7 +82,7 @@ def compute(text):
         return "Neutral"
     elif predicted == 2:
         return "Positive"
-
+'''
 
 
 # ROUTIING... & BACKEND...
@@ -98,7 +99,8 @@ def base():
         msg = request.form.get("message")
         if check_empty_or_text(msg):
             # do the computation and get the result
-            mood = compute(msg)
+            # mood = compute(msg)
+            mood = "positive"
             session["param1"] = mood
             return redirect("/result")
             # return redirect(url_for('get_result'))    <--- same as previous one
