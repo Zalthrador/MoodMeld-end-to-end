@@ -25,6 +25,14 @@ app.secret_key = os.getenv("SECRET_KEY", "default-secret-key")  # Replace "defau
 app.secret_key = os.getenv("SECRET_KEY", "68f7dfdc188c7c14d75fcfb93e972dbf83c39adbb5182b4427a15204d40769b5")
 # SECRET_KEY=70b18dad5b326380c8d85bcf0380aedd579eab92042ce3ab9a0982556e770d3f
 
+
+# Only use this lines of code for deployment
+import nltk
+# Ensure the required NLTK resources are downloaded
+nltk.download('punkt')
+nltk.download('stopwords')
+
+
 def tokenizer(text):
     # Convert to lowercase
     text = text.lower()
