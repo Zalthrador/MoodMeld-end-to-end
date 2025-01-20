@@ -1,0 +1,7 @@
+project-root/
+├── app.py
+├── static/
+├── templates/
+├── requirements.txt
+├── Procfile
+└── runtime.txt
